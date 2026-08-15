@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CloudGuard | Cloud Security Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">🛡</div>
+            <div>
+                <h1>CloudGuard</h1>
+                <span>Security Platform</span>
+            </div>
+        </div>
+
+        <nav>
+            <a class="active">Dashboard</a>
+            <a>Security Findings</a>
+            <a>IAM Security</a>
+            <a>Network Security</a>
+            <a>Reports</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span class="status-dot"></span>
+            System Online
+        </div>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+                <h2>Security Overview</h2>
+                <p>Cloud infrastructure security monitoring</p>
+            </div>
+
+            <button id="scanButton" class="scan-button">
+                🔍 Run Security Scan
+            </button>
+
+        </header>
+
+
+        <section class="hero">
+
+            <div>
+                <p class="eyebrow">CLOUD SECURITY POSTURE</p>
+
+                <h2>Your infrastructure is being monitored.</h2>
+
+                <p>
+                    CloudGuard continuously analyzes cloud configurations
+                    and identifies security risks.
+                </p>
+            </div>
+
+            <div class="score">
+                <div id="securityScore">82</div>
+                <span>/100</span>
+                <small>Security Score</small>
+            </div>
+
+        </section>
+
+
+        <section class="stats">
+
+            <div class="card">
+                <span class="card-label">Critical Issues</span>
+                <strong id="critical">--</strong>
+                <small>Immediate attention</small>
+            </div>
+
+            <div class="card">
+                <span class="card-label">High Risk</span>
+                <strong id="high">--</strong>
+                <small>Needs attention</small>
+            </div>
+
+            <div class="card">
+                <span class="card-label">IAM Risks</span>
+                <strong id="iamRisks">--</strong>
+                <small>Identity security</small>
+            </div>
+
+            <div class="card">
+                <span class="card-label">MFA Coverage</span>
+                <strong id="mfa">--%</strong>
+                <small>Account protection</small>
+            </div>
+
+        </section>
+
+
+        <section class="content-grid">
+
+            <div class="panel findings-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h3>Security Findings</h3>
+                        <p>Latest detected security risks</p>
+                    </div>
+
+                    <span class="live-badge">
+                        ● LIVE
+                    </span>
+                </div>
+
+                <div id="findingsContainer">
+                    Loading findings...
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h3>Risk Distribution</h3>
+                        <p>Current security posture</p>
+                    </div>
+                </div>
+
+                <div class="risk-item">
+                    <div>
+                        <span>Critical</span>
+                        <strong id="criticalRisk">--</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div id="criticalBar" class="bar critical"></div>
+                    </div>
+                </div>
+
+
+                <div class="risk-item">
+                    <div>
+                        <span>High</span>
+                        <strong id="highRisk">--</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div id="highBar" class="bar high"></div>
+                    </div>
+                </div>
+
+
+                <div class="risk-item">
+                    <div>
+                        <span>Medium</span>
+                        <strong id="mediumRisk">--</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div id="mediumBar" class="bar medium"></div>
+                    </div>
+                </div>
+
+
+                <div class="risk-item">
+                    <div>
+                        <span>Low</span>
+                        <strong id="lowRisk">--</strong>
+                    </div>
+
+                    <div class="progress">
+                        <div id="lowBar" class="bar low"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            CloudGuard Security Platform • v1.0.0
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
