@@ -263,6 +263,7 @@ nav a.active {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    cursor:pointer;
 }
 
 .finding h4 {
